@@ -1,4 +1,9 @@
 # assignment1
+
+
+
+
+
 import java.util.Scanner;
 
 public class Main {
@@ -6,18 +11,15 @@ public class Main {
         Scanner myObj = new Scanner(System.in);
         System.out.println("Choose the number of parameters to pass to SUM:");
         System.out.println("1. Single parameter\n2. Two parameters");
-
         int choice;
         boolean validChoice = false;
         while (!validChoice) {
             try {
                 choice = myObj.nextInt();
-
                 switch (choice) {
                     case 1:
                         System.out.println("Choose the data type of the parameter to pass to SUM:");
                         System.out.println("1. int\n2. double");
-
                         int select;
                         boolean validSelect = false;
                         while (!validSelect) {
@@ -73,7 +75,6 @@ public class Main {
                         }
                         validChoice = true;
                         break;
-
                     case 2:
                         System.out.println("Please enter the two integers to pass to SUM:");
                         int min, max;
@@ -96,7 +97,6 @@ public class Main {
                         }
                         validChoice = true;
                         break;
-
                     default:
                         System.out.println("Invalid choice, please enter a valid choice 1 or 2");
                 }
@@ -107,7 +107,6 @@ public class Main {
         }
         myObj.close(); 
     }
-
     public static int sum(int k) {
         if (k > 0) {
             return k + sum(k - 1);
@@ -115,7 +114,6 @@ public class Main {
             return 0;
         }
     }
-
     public static int sum(double k) {
         if (k > 0) {
             return (int) Math.round(k + sum(k - 1));
@@ -123,7 +121,6 @@ public class Main {
             return 0;
         }
     }
-
     public static int sum(int start, int end) {
         if (end >= start) {
             int sum = 0;
